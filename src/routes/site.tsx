@@ -8,12 +8,12 @@ import { loadBusiness, serviceList, type Business } from "@/lib/business-store";
 export const Route = createFileRoute("/site")({
   head: () => ({
     meta: [
-      { title: "My website — Scale o" },
+      { title: "My website — Scale on" },
       {
         name: "description",
-        content: "Your Scale o business website with call and WhatsApp buttons, ready to share.",
+        content: "Your Scale on business website with call and WhatsApp buttons, ready to share.",
       },
-      { property: "og:title", content: "My website — Scale o" },
+      { property: "og:title", content: "My website — Scale on" },
       {
         property: "og:description",
         content: "A ready-to-share page for your shop, built from your own details.",

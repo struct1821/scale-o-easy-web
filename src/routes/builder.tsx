@@ -8,13 +8,13 @@ import { emptyBusiness, loadBusiness, saveBusiness, type Business } from "@/lib/
 export const Route = createFileRoute("/builder")({
   head: () => ({
     meta: [
-      { title: "Build your website — Scale o" },
+      { title: "Build your website — Scale on" },
       {
         name: "description",
         content:
-          "Answer a few questions in your own language and Scale o creates your business website instantly.",
+          "Answer a few questions in your own language and Scale on creates your business website instantly.",
       },
-      { property: "og:title", content: "Build your website — Scale o" },
+      { property: "og:title", content: "Build your website — Scale on" },
       {
         property: "og:description",
         content: "Shop name, work, area, phone — your website is ready in seconds.",

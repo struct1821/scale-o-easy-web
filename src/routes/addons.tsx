@@ -14,13 +14,13 @@ import {
 export const Route = createFileRoute("/addons")({
   head: () => ({
     meta: [
-      { title: "WhatsApp & marketing add-ons — Scale o" },
+      { title: "WhatsApp & marketing add-ons — Scale on" },
       {
         name: "description",
         content:
-          "Turn on WhatsApp chat, marketing campaigns, online catalogue, reviews, bookings and payments for your Scale o website.",
+          "Turn on WhatsApp chat, marketing campaigns, online catalogue, reviews, bookings and payments for your Scale on website.",
       },
-      { property: "og:title", content: "WhatsApp & marketing add-ons — Scale o" },
+      { property: "og:title", content: "WhatsApp & marketing add-ons — Scale on" },
       {
         property: "og:description",
         content: "One tap to add WhatsApp chat, offers and campaigns to your business page.",
