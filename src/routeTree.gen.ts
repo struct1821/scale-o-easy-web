@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AddonsRouteImport } from './routes/addons'
+import { Route as BuilderRouteImport } from './routes/builder'
+import { Route as SiteRouteImport } from './routes/site'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AddonsRoute = AddonsRouteImport.update({
+  id: '/addons',
+  path: '/addons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuilderRoute = BuilderRouteImport.update({
+  id: '/builder',
+  path: '/builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SiteRoute = SiteRouteImport.update({
+  id: '/site',
+  path: '/site',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/addons': typeof AddonsRoute
+  '/builder': typeof BuilderRoute
+  '/site': typeof SiteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/addons': typeof AddonsRoute
+  '/builder': typeof BuilderRoute
+  '/site': typeof SiteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/addons': typeof AddonsRoute
+  '/builder': typeof BuilderRoute
+  '/site': typeof SiteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/addons' | '/builder' | '/site'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/addons' | '/builder' | '/site'
+  id: '__root__' | '/' | '/addons' | '/builder' | '/site'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AddonsRoute: typeof AddonsRoute
+  BuilderRoute: typeof BuilderRoute
+  SiteRoute: typeof SiteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/addons': {
+      id: '/addons'
+      path: '/addons'
+      fullPath: '/addons'
+      preLoaderRoute: typeof AddonsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/builder': {
+      id: '/builder'
+      path: '/builder'
+      fullPath: '/builder'
+      preLoaderRoute: typeof BuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site': {
+      id: '/site'
+      path: '/site'
+      fullPath: '/site'
+      preLoaderRoute: typeof SiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AddonsRoute: AddonsRoute,
+  BuilderRoute: BuilderRoute,
+  SiteRoute: SiteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
