@@ -5,9 +5,13 @@ export function ScaleoNav() {
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <Link to="/" className="flex items-center gap-2">
-          <span className="grid size-9 place-items-center rounded-xl bg-primary text-lg font-black text-primary-foreground">
-            S
-          </span>
+          <img
+            src="/brand-mark.png"
+            alt="Scale on"
+            width={36}
+            height={36}
+            className="size-9 rounded-xl"
+          />
           <span className="text-lg font-bold tracking-tight text-primary-deep">
             Scale <span className="text-primary-glow">on</span>
           </span>
