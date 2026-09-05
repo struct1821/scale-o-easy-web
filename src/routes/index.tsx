@@ -145,7 +145,7 @@ function Index() {
             to="/builder"
             className="mt-10 inline-flex rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-            Start now — it's free
+            Start now
           </Link>
         </div>
       </section>

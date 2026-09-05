@@ -30,51 +30,44 @@ export const Route = createFileRoute("/addons")({
   component: Addons,
 });
 
-const ADDONS: { id: AddonId; icon: typeof MessageCircle; title: string; body: string; price: string }[] =
-  [
-    {
-      id: "whatsapp",
-      icon: MessageCircle,
-      title: "WhatsApp chat",
-      body: "A chat button on your page, quick replies and order messages.",
-      price: "Free",
-    },
-    {
-      id: "campaigns",
-      icon: Megaphone,
-      title: "Marketing campaigns",
-      body: "Send festival offers and reminders to your saved customers.",
-      price: "₹299 / month",
-    },
-    {
-      id: "catalog",
-      icon: ShoppingBag,
-      title: "Online catalogue",
-      body: "Show your items with photos and prices, share as a link.",
-      price: "₹199 / month",
-    },
-    {
-      id: "reviews",
-      icon: Star,
-      title: "Customer reviews",
-      body: "Collect star ratings and show the best ones on your page.",
-      price: "Free",
-    },
-    {
-      id: "bookings",
-      icon: CalendarCheck,
-      title: "Bookings",
-      body: "Let customers book a slot or a visit without calling.",
-      price: "₹249 / month",
-    },
-    {
-      id: "payments",
-      icon: Wallet,
-      title: "Online payments",
-      body: "Take UPI and card payments straight from your page.",
-      price: "2% per order",
-    },
-  ];
+const ADDONS: { id: AddonId; icon: typeof MessageCircle; title: string; body: string }[] = [
+  {
+    id: "whatsapp",
+    icon: MessageCircle,
+    title: "WhatsApp chat",
+    body: "A chat button on your page, quick replies and order messages.",
+  },
+  {
+    id: "campaigns",
+    icon: Megaphone,
+    title: "Marketing campaigns",
+    body: "Send festival offers and reminders to your saved customers.",
+  },
+  {
+    id: "catalog",
+    icon: ShoppingBag,
+    title: "Online catalogue",
+    body: "Show your items with photos and prices, share as a link.",
+  },
+  {
+    id: "reviews",
+    icon: Star,
+    title: "Customer reviews",
+    body: "Collect star ratings and show the best ones on your page.",
+  },
+  {
+    id: "bookings",
+    icon: CalendarCheck,
+    title: "Bookings",
+    body: "Let customers book a slot or a visit without calling.",
+  },
+  {
+    id: "payments",
+    icon: Wallet,
+    title: "Online payments",
+    body: "Take UPI and card payments straight from your page.",
+  },
+];
 
 function Addons() {
   const [b, setB] = useState<Business>(emptyBusiness);
@@ -133,7 +126,6 @@ function Addons() {
                 </div>
                 <h2 className="mt-4 text-lg font-semibold text-foreground">{a.title}</h2>
                 <p className="mt-2 text-sm text-muted-foreground">{a.body}</p>
-                <p className="mt-4 text-sm font-semibold text-primary">{a.price}</p>
               </button>
             );
           })}
