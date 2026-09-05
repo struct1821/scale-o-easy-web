@@ -9,7 +9,7 @@ export function ScaleoNav() {
             S
           </span>
           <span className="text-lg font-bold tracking-tight text-primary-deep">
-            Scale<span className="text-primary-glow">o</span>
+            Scale <span className="text-primary-glow">on</span>
           </span>
         </Link>
         <nav className="flex items-center gap-1 text-sm font-medium">
@@ -44,7 +44,7 @@ export function ScaleoFooter() {
   return (
     <footer className="border-t border-border/70 bg-muted/40 py-8">
       <div className="mx-auto max-w-6xl px-5 text-sm text-muted-foreground">
-        Scale o — every local shop online, in its own language.
+        Scale on — every local shop online, in its own language.
       </div>
     </footer>
   );

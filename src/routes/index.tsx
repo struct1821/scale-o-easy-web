@@ -6,13 +6,13 @@ import { LANGUAGES } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Scale o — Your shop online in 60 seconds" },
+      { title: "Scale on — Your shop online in 60 seconds" },
       {
         name: "description",
         content:
-          "Scale o builds a ready website for local shops and freelancers in their own language, with WhatsApp and marketing add-ons. No technical skills needed.",
+          "Scale on builds a ready website for local shops and freelancers in their own language, with WhatsApp and marketing add-ons. No technical skills needed.",
       },
-      { property: "og:title", content: "Scale o — Your shop online in 60 seconds" },
+      { property: "og:title", content: "Scale on — Your shop online in 60 seconds" },
       {
         property: "og:description",
         content:
@@ -51,7 +51,7 @@ function Index() {
             </h1>
             <p className="mt-5 max-w-xl text-lg text-primary-foreground/85">
               Made for small shop owners and freelancers. Answer simple questions in your own
-              language and Scale o puts your business online — no technical knowledge needed.
+              language and Scale on puts your business online — no technical knowledge needed.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
